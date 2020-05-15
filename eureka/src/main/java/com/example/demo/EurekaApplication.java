@@ -23,7 +23,6 @@ public class EurekaApplication {
         System.out.println("测试提交用户");
 
         System.out.println("测试rebase");
-
         SpringApplication.run(EurekaApplication.class, args);
     }
 
