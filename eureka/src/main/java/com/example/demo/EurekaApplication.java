@@ -10,6 +10,7 @@ public class EurekaApplication {
 
     public static void main(String[] args) {
         System.out.println("新的分支");
+        System.out.println("主分支修改");
         SpringApplication.run(EurekaApplication.class, args);
     }
 
