@@ -19,6 +19,8 @@ public class EurekaApplication {
         System.out.println("新分支又又修改了1");
         System.out.println("新分支又又修改了2");
         System.out.println("新分支又又修改了3");
+
+        System.out.println("测试提交用户");
         SpringApplication.run(EurekaApplication.class, args);
     }
 
