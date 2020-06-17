@@ -49,6 +49,7 @@
 		<module>eureka-client</module>
 		<module>eureka-fegin</module>
 		<module>eureka-zuul</module>
+		<module>activemq</module>
 	</modules>
 	
 	
