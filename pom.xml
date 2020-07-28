@@ -50,6 +50,7 @@
 		<module>eureka-fegin</module>
 		<module>eureka-zuul</module>
 		<module>activemq</module>
+		<module>kafka</module>
 	</modules>
 	
 	
@@ -61,6 +62,7 @@
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
+					<skipTests>true</skipTests>
 				</configuration>
 			</plugin>
 		</plugins>
