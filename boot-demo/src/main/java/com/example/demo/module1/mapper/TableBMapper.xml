@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.module1.dao.TableBMapper">
+    <resultMap id="BaseResultMap" type="com.example.demo.module1.entity.TableB">
+        <result column="column_a" property="columnA" jdbcType="VARCHAR"/>
+        <result column="column_b" property="columnB" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+	  column_a, column_b
+	</sql>
+	<select id="qryTableBDatas" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List"></include>
+		from table_b
+	</select>
+</mapper>

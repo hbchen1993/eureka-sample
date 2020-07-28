@@ -51,6 +51,7 @@
 		<module>eureka-zuul</module>
 		<module>activemq</module>
 		<module>kafka</module>
+		<module>boot-demo</module>
 	</modules>
 	
 	
