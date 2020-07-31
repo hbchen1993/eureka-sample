@@ -2,6 +2,8 @@ package com.example.demo.module1.service.impl;
 
 import javax.annotation.Resource;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
@@ -24,6 +26,8 @@ import com.github.pagehelper.PageHelper;
 @Service
 public class TestServiceImpl implements TestService {
 
+    private static Logger logger = LoggerFactory.getLogger(TestServiceImpl.class);
+
     @Resource
     private RedisTemplate<String, Object> redisTemplate;
 
@@ -32,13 +36,11 @@ public class TestServiceImpl implements TestService {
 
     @Override
     public Page<TableB> testMethod() {
-        // redis塞值
-        redisTemplate.opsForValue().set("test1", "测试redis1");
-        // redis取值
-        System.out.println(redisTemplate.opsForValue().get("test1"));
+
+        redisTemplate.opsForValue().set("test:test1", "测试");
+        logger.info(redisTemplate.opsForValue().get("test:test1").toString());
 
         PageHelper.startPage(1, 2);
-
         Page<TableB> page = tableBMapper.qryTableBDatas();
 
         return page;

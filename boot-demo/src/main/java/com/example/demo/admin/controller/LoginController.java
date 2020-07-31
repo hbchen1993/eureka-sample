@@ -29,6 +29,7 @@ public class LoginController {
     public String login(User user) {
 
         Subject subject = SecurityUtils.getSubject();
+        subject.getSession();
         if (subject.isAuthenticated()) {
             return "已经登录";
         }

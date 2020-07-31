@@ -22,6 +22,12 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-redis</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>io.lettuce</groupId>
+  					<artifactId>lettuce-core</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -31,7 +37,21 @@
 			<groupId>org.mybatis.spring.boot</groupId>
 			<artifactId>mybatis-spring-boot-starter</artifactId>
 			<version>2.1.3</version>
+			<exclusions>
+				<exclusion>
+					<groupId>com.zaxxer</groupId>
+					<artifactId>HikariCP</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/com.alibaba/druid -->
+		<dependency>
+		    <groupId>com.alibaba</groupId>
+		    <artifactId>druid</artifactId>
+		    <version>1.1.23</version>
+		</dependency>
+		
 
 		<dependency>
 			<groupId>mysql</groupId>
@@ -52,6 +72,12 @@
 		    <artifactId>shiro-spring</artifactId>
 		    <version>1.5.3</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.crazycake/shiro-redis -->
+		<dependency>
+		    <groupId>org.crazycake</groupId>
+		    <artifactId>shiro-redis</artifactId>
+		    <version>3.2.3</version>
+		</dependency>
 		
 
 		
@@ -66,6 +92,11 @@
 					<artifactId>junit-vintage-engine</artifactId>
 				</exclusion>
 			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
 		</dependency>
 	</dependencies>
 

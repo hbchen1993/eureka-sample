@@ -1,5 +1,9 @@
 package com.example.demo.admin.entity;
 
+import java.io.Serializable;
+
+import org.springframework.data.annotation.Id;
+
 /**
  * <Description> <br>
  * 用户实体
@@ -9,8 +13,14 @@ package com.example.demo.admin.entity;
  * @CreateDate 2020-7-27 <br>
  * @see com.example.demo.admin.entity <br>
  */
-public class User {
+public class User implements Serializable {
 
+    /**
+     * serialVersionUID <br>
+     */
+    private static final long serialVersionUID = 1L;
+
+    @Id
     private String username;
 
     private String password;

@@ -13,6 +13,7 @@ import com.example.demo.admin.entity.User;
 
 public class MyShiroRealm extends AuthorizingRealm {
 
+    @SuppressWarnings("unused")
     private static String credentialsSalt = "test";
 
     /**
@@ -47,7 +48,7 @@ public class MyShiroRealm extends AuthorizingRealm {
         SimpleAuthorizationInfo authorizationInfo = new SimpleAuthorizationInfo();
         // 如果身份认证的时候没有传入User对象，这里只能取到userName
         // 也就是SimpleAuthenticationInfo构造的时候第一个参数传递需要User对象
-        User user = (User) principals.getPrimaryPrincipal();
+        // User user = (User) principals.getPrimaryPrincipal();
         // for (Role role : user.getRoleList()) {
         // // 添加角色
         // authorizationInfo.addRole(role.getRole());
