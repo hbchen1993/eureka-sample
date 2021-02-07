@@ -148,11 +148,12 @@ public class ShiroConfig {
         // filterMap.put("/swagger**/**", "anon");
         // filterMap.put("/webjars/**", "anon");
         // filterMap.put("/v2/**", "anon");
-        filterMap.put("/doLogin", "anon");
-        filterMap.put("/doLogout", "anon");
+        // filterMap.put("/doLogin", "anon");
+        // filterMap.put("/doLogout", "anon");
         // filterMap.put("/test/testMethod", "anon");
         // 对所有用户认证
-        filterMap.put("/**", "authc");
+        // filterMap.put("/**", "authc");
+        filterMap.put("/**", "anon");
         // 登录
         // bean.setLoginUrl("/login");
         // 首页

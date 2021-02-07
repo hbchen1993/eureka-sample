@@ -52,6 +52,7 @@
 		<module>activemq</module>
 		<module>kafka</module>
 		<module>boot-demo</module>
+		<module>boot-demo-many-datasource</module>
 	</modules>
 	
 	

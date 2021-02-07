@@ -11,7 +11,7 @@ public class KafkaConsumer {
 
     private static Logger logger = LoggerFactory.getLogger(KafkaConsumer.class);
 
-    @KafkaListener(topics = "test", groupId = "1111")
+    @KafkaListener(topics = "dm_earthquake", groupId = "dm_earthquake")
     public void listen(ConsumerRecord<?, ?> record) {
         logger.info("主题:{} 内容：{}", record.topic(), record.value());
     }
